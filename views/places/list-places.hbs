@@ -1,0 +1,18 @@
+<h2 class="mt-5">Places List</h2>
+<hr>
+<div class="d-flex flex-wrap justifycontent-center">
+    {{#each place}}
+    <div class="card m-2" style="width: 18rem;">
+        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/places/{{_id}}" class="btn btn-dark">Info</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<figure id="myMap"></figure>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/placesMap.js"></script>
+<script src="/js/mapStyle.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?&callback=init"></script>
